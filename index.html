@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT Geometry Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📐</span>
+                <span class="logo-text">SAT Geometry</span>
+            </div>
+
+            <div class="nav-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Streak</span>
+                    <span class="stat-value" id="streak">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Level</span>
+                    <span class="stat-value" id="level">1</span>
+                </div>
+                <div class="stat-item time-bank">
+                    <span class="stat-icon">🎮</span>
+                    <span class="stat-value" id="timeBank">0</span>
+                    <span class="stat-label">min</span>
+                </div>
+            </div>
+
+            <div class="user-menu">
+                <button class="icon-button">
+                    <span>👤</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Progress</h3>
+                <div class="progress-overview">
+                    <div class="xp-bar">
+                        <div class="xp-label">
+                            <span>XP</span>
+                            <span id="xpText">250 / 500</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="xpProgress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Concepts</h3>
+                <div class="concept-list">
+                    <div class="concept-item mastered">
+                        <span class="concept-icon">✓</span>
+                        <span class="concept-name">Vertical Angles</span>
+                        <span class="concept-progress">3/3</span>
+                    </div>
+                    <div class="concept-item in-progress">
+                        <span class="concept-icon">●</span>
+                        <span class="concept-name">Triangle Angle Sum</span>
+                        <span class="concept-progress">2/3</span>
+                    </div>
+                    <div class="concept-item locked">
+                        <span class="concept-icon">🔒</span>
+                        <span class="concept-name">Pythagorean Theorem</span>
+                        <span class="concept-progress">0/3</span>
+                    </div>
+                    <div class="concept-item locked">
+                        <span class="concept-icon">🔒</span>
+                        <span class="concept-name">Similar Triangles</span>
+                        <span class="concept-progress">0/3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Daily Goal</h3>
+                <div class="daily-goal">
+                    <div class="goal-text">
+                        <span>5 Questions</span>
+                        <span class="goal-progress">3/5</span>
+                    </div>
+                    <div class="progress-bar small">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <div class="goal-reward">+10 min bonus</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <!-- Question Card -->
+            <div class="question-card" id="questionCard">
+                <div class="question-header">
+                    <div class="question-meta">
+                        <span class="question-number">Question 1 of 10</span>
+                        <span class="question-topic">Lines & Angles</span>
+                    </div>
+                    <div class="question-difficulty">
+                        <span class="difficulty-badge easy">Easy</span>
+                    </div>
+                </div>
+
+                <div class="question-content">
+                    <p class="question-text">
+                        In the figure, two lines intersect at a point. Angle 1 and angle 2 are vertical angles.
+                        The measure of angle 1 is 72°. What is the measure of angle 2?
+                    </p>
+
+                    <div class="question-image">
+                        <div class="image-placeholder">
+                            <span>📊 Diagram: Two intersecting lines forming vertical angles</span>
+                        </div>
+                    </div>
+
+                    <div class="answer-options">
+                        <button class="answer-option" data-answer="A">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">72°</span>
+                        </button>
+                        <button class="answer-option" data-answer="B">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">108°</span>
+                        </button>
+                        <button class="answer-option" data-answer="C">
+                            <span class="option-letter">C</span>
+                            <span class="option-text">144°</span>
+                        </button>
+                        <button class="answer-option" data-answer="D">
+                            <span class="option-letter">D</span>
+                            <span class="option-text">288°</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="question-footer">
+                    <button class="btn-secondary" id="hintBtn">
+                        💡 Hint (-1 min)
+                    </button>
+                    <button class="btn-primary" id="submitBtn" disabled>
+                        Submit Answer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Feedback Card (hidden by default) -->
+            <div class="feedback-card correct" id="feedbackCard" style="display: none;">
+                <div class="feedback-icon">✓</div>
+                <h2 class="feedback-title">Correct!</h2>
+                <p class="feedback-message">
+                    Vertical angles have equal measures. Since angle 1 is 72°, angle 2 is also 72°.
+                </p>
+
+                <div class="reward-display">
+                    <div class="reward-item">
+                        <span class="reward-icon">🎮</span>
+                        <span class="reward-value">+5 min</span>
+                        <span class="reward-label">Game Time</span>
+                    </div>
+                    <div class="reward-item">
+                        <span class="reward-icon">⭐</span>
+                        <span class="reward-value">+100 XP</span>
+                        <span class="reward-label">Experience</span>
+                    </div>
+                    <div class="reward-item">
+                        <span class="reward-icon">🔥</span>
+                        <span class="reward-value">Streak: 4</span>
+                        <span class="reward-label">Keep going!</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary large" id="nextBtn">
+                    Next Question →
+                </button>
+            </div>
+        </main>
+
+        <!-- Right Panel - Achievements & Challenges -->
+        <aside class="right-panel">
+            <div class="panel-section">
+                <h3 class="panel-title">Today's Challenges</h3>
+                <div class="challenge-list">
+                    <div class="challenge-item completed">
+                        <div class="challenge-icon">✓</div>
+                        <div class="challenge-info">
+                            <div class="challenge-name">Morning Practice</div>
+                            <div class="challenge-reward">+10 min</div>
+                        </div>
+                    </div>
+                    <div class="challenge-item active">
+                        <div class="challenge-icon">⏱️</div>
+                        <div class="challenge-info">
+                            <div class="challenge-name">Speed Round</div>
+                            <div class="challenge-reward">+15 min</div>
+                        </div>
+                        <div class="challenge-progress">3/5</div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">🎯</div>
+                        <div class="challenge-info">
+                            <div class="challenge-name">Perfect Accuracy</div>
+                            <div class="challenge-reward">+20 min</div>
+                        </div>
+                        <div class="challenge-progress">0/10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3 class="panel-title">Recent Achievements</h3>
+                <div class="achievement-list">
+                    <div class="achievement-badge">
+                        <div class="badge-icon">📐</div>
+                        <div class="badge-name">Angle Master</div>
+                    </div>
+                    <div class="achievement-badge">
+                        <div class="badge-icon">🔥</div>
+                        <div class="badge-name">Hot Streak</div>
+                    </div>
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🎓</div>
+                        <div class="badge-name">Scholar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3 class="panel-title">Need Help? 📚</h3>
+                <div class="help-section" id="helpSection">
+                    <p class="help-intro">Learn the concepts step by step</p>
+                    <button class="btn-help" id="showHelpBtn">
+                        Show Learning Resources
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal" id="helpModal" style="display: none;">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Learning Resources</h2>
+                <button class="modal-close" id="closeHelpBtn">✕</button>
+            </div>
+            <div class="modal-body" id="helpModalBody">
+                <div class="concept-breakdown">
+                    <h3 id="conceptTitle">Loading...</h3>
+                    <p class="concept-explanation" id="conceptExplanation"></p>
+
+                    <div class="key-formula" id="keyFormula"></div>
+
+                    <div class="prerequisites" id="prerequisites"></div>
+
+                    <div class="khan-lessons" id="khanLessons"></div>
+
+                    <div class="common-mistakes" id="commonMistakes"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

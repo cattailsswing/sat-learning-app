@@ -1,0 +1,481 @@
+{
+  "question_concept_mapping": {
+    "9912e19f": {
+      "primary_concept": "2.2",
+      "concept_name": "Congruent Triangles",
+      "secondary_concepts": ["2.1"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "379ffefb": {
+      "primary_concept": "3.1",
+      "concept_name": "Pythagorean Theorem",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "0bb39de4": {
+      "primary_concept": "2.2",
+      "concept_name": "Congruent Triangles",
+      "secondary_concepts": ["2.1"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "50774285": {
+      "primary_concept": "5.1",
+      "concept_name": "Rectangular Prism Volume",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "3D Geometry",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "29e9b28c": {
+      "primary_concept": "2.5",
+      "concept_name": "Triangle Perimeter",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "cf0d3050": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": ["1.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "3b4b5b1e": {
+      "primary_concept": "1.3",
+      "concept_name": "Linear Pairs",
+      "secondary_concepts": ["1.2"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "5733ce30": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": ["2.4", "1.3"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "23c5fcce": {
+      "primary_concept": "6.2",
+      "concept_name": "Arc Length",
+      "secondary_concepts": ["6.1"],
+      "difficulty": "Easy",
+      "skill_category": "Circles",
+      "level": 3,
+      "estimated_time_seconds": 90
+    },
+    "f1747a6a": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "992f4e93": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": ["1.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "afa3c48b": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": ["1.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "c88183f7": {
+      "primary_concept": "4.2",
+      "concept_name": "Rectangle Perimeter",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "410bdbe6": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 75
+    },
+    "a456f28c": {
+      "primary_concept": "1.1",
+      "concept_name": "Angle Relationships - Vertical Angles",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 1,
+      "estimated_time_seconds": 45
+    },
+    "087cdcfd": {
+      "primary_concept": "1.1",
+      "concept_name": "Angle Relationships - Multiple",
+      "secondary_concepts": ["1.3", "2.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 3,
+      "estimated_time_seconds": 120
+    },
+    "b4767bef": {
+      "primary_concept": "2.5",
+      "concept_name": "Triangle Perimeter",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "575f1e12": {
+      "primary_concept": "4.3",
+      "concept_name": "Rectangle Area",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "b434e103": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "689abc2a": {
+      "primary_concept": "8.2",
+      "concept_name": "Subtracting Areas",
+      "secondary_concepts": ["4.3"],
+      "difficulty": "Easy",
+      "skill_category": "Combined Shapes",
+      "level": 3,
+      "estimated_time_seconds": 60
+    },
+    "bbaac300": {
+      "primary_concept": "3.2",
+      "concept_name": "Trigonometric Ratios - Cosine",
+      "secondary_concepts": ["2.3"],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 3,
+      "estimated_time_seconds": 90
+    },
+    "69f4bbdc": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "3563d76d": {
+      "primary_concept": "7.3",
+      "concept_name": "Real-World Applications - Shadow Problems",
+      "secondary_concepts": ["7.1", "2.3"],
+      "difficulty": "Easy",
+      "skill_category": "Similarity & Proportions",
+      "level": 3,
+      "estimated_time_seconds": 120
+    },
+    "dfc420b2": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": ["1.1"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "f2495de4": {
+      "primary_concept": "6.3",
+      "concept_name": "Unit Circle & Trigonometry",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Circles",
+      "level": 3,
+      "estimated_time_seconds": 120
+    },
+    "0837c3b9": {
+      "primary_concept": "7.2",
+      "concept_name": "Scale Factors - Perimeter",
+      "secondary_concepts": ["2.3", "7.1"],
+      "difficulty": "Easy",
+      "skill_category": "Similarity & Proportions",
+      "level": 3,
+      "estimated_time_seconds": 90
+    },
+    "a6097ec2": {
+      "primary_concept": "3.2",
+      "concept_name": "Trigonometric Ratios - Sine",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 3,
+      "estimated_time_seconds": 75
+    },
+    "d0b6d927": {
+      "primary_concept": "4.3",
+      "concept_name": "Rectangle Area",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 75
+    },
+    "64c1f044": {
+      "primary_concept": "3.2",
+      "concept_name": "Trigonometric Ratios - Tangent",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 3,
+      "estimated_time_seconds": 75
+    },
+    "9d078710": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals - Proof",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "0d43db90": {
+      "primary_concept": "2.5",
+      "concept_name": "Triangle Perimeter",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "0e40dfb0": {
+      "primary_concept": "4.3",
+      "concept_name": "Rectangle Area - Expression",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "fc5ef8d3": {
+      "primary_concept": "7.2",
+      "concept_name": "Scale Factors - Perimeter",
+      "secondary_concepts": ["2.3", "7.1"],
+      "difficulty": "Easy",
+      "skill_category": "Similarity & Proportions",
+      "level": 3,
+      "estimated_time_seconds": 90
+    },
+    "f9d40000": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "cbe8ca31": {
+      "primary_concept": "2.1",
+      "concept_name": "Triangle Angle Sum",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "c24e1bda": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "babd7461": {
+      "primary_concept": "7.2",
+      "concept_name": "Scale Factors - Perimeter",
+      "secondary_concepts": ["2.3", "7.1"],
+      "difficulty": "Easy",
+      "skill_category": "Similarity & Proportions",
+      "level": 3,
+      "estimated_time_seconds": 120
+    },
+    "a6dbad6b": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": ["2.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "59cb654c": {
+      "primary_concept": "4.5",
+      "concept_name": "Square Area",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "2b41a4c4": {
+      "primary_concept": "5.1",
+      "concept_name": "Rectangular Prism Volume",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "3D Geometry",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "5252e606": {
+      "primary_concept": "4.5",
+      "concept_name": "Square Area",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "bb560789": {
+      "primary_concept": "8.1",
+      "concept_name": "Adding Areas",
+      "secondary_concepts": ["4.5"],
+      "difficulty": "Easy",
+      "skill_category": "Combined Shapes",
+      "level": 3,
+      "estimated_time_seconds": 75
+    },
+    "e6f2ace7": {
+      "primary_concept": "3.1",
+      "concept_name": "Pythagorean Theorem",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 2,
+      "estimated_time_seconds": 90
+    },
+    "b0c5ece5": {
+      "primary_concept": "3.1",
+      "concept_name": "Pythagorean Theorem - Equation",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "5207e508": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "93f48423": {
+      "primary_concept": "4.3",
+      "concept_name": "Rectangle Area",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Quadrilaterals",
+      "level": 1,
+      "estimated_time_seconds": 60
+    },
+    "0d3f51dc": {
+      "primary_concept": "1.2",
+      "concept_name": "Parallel Lines & Transversals",
+      "secondary_concepts": ["1.1"],
+      "difficulty": "Easy",
+      "skill_category": "Lines & Angles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "87a9a2d4": {
+      "primary_concept": "3.2",
+      "concept_name": "Trigonometric Ratios - Sine",
+      "secondary_concepts": [],
+      "difficulty": "Easy",
+      "skill_category": "Right Triangles",
+      "level": 3,
+      "estimated_time_seconds": 75
+    },
+    "c8d60e48": {
+      "primary_concept": "2.4",
+      "concept_name": "Isosceles Triangles",
+      "secondary_concepts": ["2.1"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 2,
+      "estimated_time_seconds": 75
+    },
+    "d5f349b7": {
+      "primary_concept": "2.3",
+      "concept_name": "Similar Triangles",
+      "secondary_concepts": ["2.1", "3.2"],
+      "difficulty": "Easy",
+      "skill_category": "Triangles",
+      "level": 3,
+      "estimated_time_seconds": 120
+    }
+  },
+  "concept_definitions": {
+    "1.1": "Angle Relationships (vertical, supplementary, complementary)",
+    "1.2": "Parallel Lines & Transversals",
+    "1.3": "Linear Pairs",
+    "2.1": "Triangle Angle Sum",
+    "2.2": "Congruent Triangles",
+    "2.3": "Similar Triangles",
+    "2.4": "Isosceles Triangles",
+    "2.5": "Triangle Perimeter",
+    "3.1": "Pythagorean Theorem",
+    "3.2": "Trigonometric Ratios",
+    "4.1": "Rectangle Properties",
+    "4.2": "Rectangle Perimeter",
+    "4.3": "Rectangle Area",
+    "4.4": "Square Properties",
+    "4.5": "Square Area",
+    "5.1": "Rectangular Prism Volume",
+    "5.2": "Working with Units",
+    "6.1": "Circle Properties",
+    "6.2": "Arc Length",
+    "6.3": "Unit Circle & Trigonometry",
+    "7.1": "Similar Figures",
+    "7.2": "Scale Factors",
+    "7.3": "Real-World Applications",
+    "8.1": "Adding Areas",
+    "8.2": "Subtracting Areas"
+  }
+}

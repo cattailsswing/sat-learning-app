@@ -1,0 +1,606 @@
+{
+  "concept_resources": {
+    "1.1": {
+      "concept_name": "Angle Relationships (vertical, supplementary, complementary)",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Vertical angles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/v/vertical-angles",
+          "type": "video",
+          "duration": "4 min"
+        },
+        {
+          "title": "Complementary and supplementary angles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/v/complementary-and-supplementary-angles",
+          "type": "video",
+          "duration": "3 min"
+        },
+        {
+          "title": "Angle relationships practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/e/angles_1",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "When two lines cross, they create pairs of angles. Vertical angles (opposite each other) are always equal. Adjacent angles that form a straight line add up to 180° (supplementary).",
+      "key_formula": "Vertical angles: ∠1 = ∠2",
+      "common_mistakes": [
+        "Confusing vertical angles with adjacent angles",
+        "Forgetting that supplementary angles must add to exactly 180°"
+      ]
+    },
+    "1.2": {
+      "concept_name": "Parallel Lines & Transversals",
+      "prerequisites": ["1.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Parallel lines and transversals",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-parallel-perpendicular/v/parallel-lines-and-transversals",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Corresponding angles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-parallel-perpendicular/v/corresponding-angles-are-congruent",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Alternate interior angles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-parallel-perpendicular/v/alternate-interior-angles",
+          "type": "video",
+          "duration": "4 min"
+        },
+        {
+          "title": "Parallel lines practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-parallel-perpendicular/e/angles_2",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "When a line crosses two parallel lines, it creates 8 angles. Some of these angles are equal to each other: corresponding angles (same position), alternate interior angles (inside, opposite sides), and alternate exterior angles (outside, opposite sides).",
+      "key_formula": "When lines are parallel: corresponding angles are equal, alternate interior angles are equal",
+      "common_mistakes": [
+        "Not identifying which angles are corresponding vs alternate",
+        "Assuming lines are parallel without being told"
+      ]
+    },
+    "1.3": {
+      "concept_name": "Linear Pairs",
+      "prerequisites": ["1.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Linear pairs of angles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/v/linear-pair-postulate",
+          "type": "video",
+          "duration": "3 min"
+        },
+        {
+          "title": "Angle pairs practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/e/complementary_and_supplementary_angles",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "A linear pair is two adjacent angles that form a straight line. They always add up to 180°. If you know one angle, you can find the other by subtracting from 180.",
+      "key_formula": "Linear pair: ∠1 + ∠2 = 180°",
+      "common_mistakes": [
+        "Confusing linear pairs with vertical angles"
+      ]
+    },
+    "2.1": {
+      "concept_name": "Triangle Angle Sum",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Triangle angle sum theorem",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/v/triangle-angle-sum-theorem",
+          "type": "video",
+          "duration": "4 min"
+        },
+        {
+          "title": "Finding angles in triangles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/v/finding-angle-measures-using-triangles",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Triangle angles practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/e/angles_of_a_triangle",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "The three angles inside any triangle always add up to 180°. If you know two angles, subtract their sum from 180° to find the third angle.",
+      "key_formula": "∠A + ∠B + ∠C = 180°",
+      "common_mistakes": [
+        "Forgetting to subtract from 180° (not adding to it)",
+        "Mixing up interior and exterior angles"
+      ]
+    },
+    "2.2": {
+      "concept_name": "Congruent Triangles",
+      "prerequisites": ["2.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Congruent triangles introduction",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-congruence/hs-geo-congruent-triangles/v/congruent-triangles-and-sss",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Corresponding parts of congruent triangles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-congruence/hs-geo-congruent-triangles/v/triangle-congruence-postulates",
+          "type": "video",
+          "duration": "8 min"
+        },
+        {
+          "title": "Congruent triangles practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-congruence/hs-geo-congruent-triangles/e/congruent_triangles",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Congruent triangles are identical in shape and size. When two triangles are congruent, all their corresponding parts (angles and sides) are equal. Use CPCTC: Corresponding Parts of Congruent Triangles are Congruent.",
+      "key_formula": "If △ABC ≅ △DEF, then ∠A = ∠D, ∠B = ∠E, ∠C = ∠F",
+      "common_mistakes": [
+        "Not matching corresponding vertices in the right order",
+        "Assuming triangles are congruent without proper evidence"
+      ]
+    },
+    "2.3": {
+      "concept_name": "Similar Triangles",
+      "prerequisites": ["2.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Similar triangles introduction",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/v/similar-triangles",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Solving problems with similar triangles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/v/solving-similar-triangles",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Similar triangles practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/e/similar_triangles_1",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Similar triangles have the same shape but different sizes. Their corresponding angles are equal, and their corresponding sides are proportional (in the same ratio).",
+      "key_formula": "If △ABC ~ △DEF, then AB/DE = BC/EF = AC/DF",
+      "common_mistakes": [
+        "Setting up proportions incorrectly",
+        "Confusing similarity with congruence"
+      ]
+    },
+    "2.4": {
+      "concept_name": "Isosceles Triangles",
+      "prerequisites": ["2.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Isosceles and equilateral triangles",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/v/isosceles-and-equilateral-triangles",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Isosceles triangle theorems",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/v/equilateral-and-isosceles-example-problems",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Special triangles practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-triangles/e/angles_of_a_triangle",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "An isosceles triangle has two equal sides. The angles opposite those equal sides are also equal (base angles). If you know one base angle, the other base angle is the same.",
+      "key_formula": "If two sides are equal, their opposite angles are equal",
+      "common_mistakes": [
+        "Forgetting that base angles are equal",
+        "Assuming all angles are equal (that's only in equilateral triangles)"
+      ]
+    },
+    "2.5": {
+      "concept_name": "Triangle Perimeter",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Perimeter introduction",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-perimeter/v/perimeter-and-area-basics",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Perimeter practice",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-perimeter/e/perimeter_1",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "Perimeter is the distance around a shape. For a triangle, add up all three side lengths: side 1 + side 2 + side 3.",
+      "key_formula": "Perimeter = a + b + c",
+      "common_mistakes": [
+        "Confusing perimeter with area",
+        "Using the wrong units"
+      ]
+    },
+    "3.1": {
+      "concept_name": "Pythagorean Theorem",
+      "prerequisites": ["2.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Pythagorean theorem intro",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pythagorean-theorem/v/the-pythagorean-theorem",
+          "type": "video",
+          "duration": "8 min"
+        },
+        {
+          "title": "Using the Pythagorean theorem",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pythagorean-theorem/v/pythagorean-theorem-example",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Pythagorean theorem practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pythagorean-theorem/e/pythagorean_theorem_1",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "In a right triangle, the square of the longest side (hypotenuse) equals the sum of squares of the other two sides. If you know two sides, you can find the third.",
+      "key_formula": "a² + b² = c² (where c is the hypotenuse)",
+      "common_mistakes": [
+        "Forgetting to take the square root at the end",
+        "Using the theorem on non-right triangles",
+        "Not identifying which side is the hypotenuse"
+      ]
+    },
+    "3.2": {
+      "concept_name": "Trigonometric Ratios",
+      "prerequisites": ["3.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Introduction to trigonometry",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/v/basic-trigonometry",
+          "type": "video",
+          "duration": "10 min"
+        },
+        {
+          "title": "Sine, cosine, and tangent",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/v/sine-cosine-and-tangent",
+          "type": "video",
+          "duration": "8 min"
+        },
+        {
+          "title": "SOHCAHTOA",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/v/trigonometry-word-problem-example",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Trigonometry practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/e/trigonometry_0.5",
+          "type": "exercise",
+          "duration": "20 min"
+        }
+      ],
+      "simple_explanation": "In right triangles, trig ratios relate angles to side lengths. SOH-CAH-TOA: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent.",
+      "key_formula": "sin(θ) = opp/hyp, cos(θ) = adj/hyp, tan(θ) = opp/adj",
+      "common_mistakes": [
+        "Mixing up opposite and adjacent sides",
+        "Using degrees instead of correct calculator mode",
+        "Forgetting SOHCAHTOA"
+      ]
+    },
+    "4.2": {
+      "concept_name": "Rectangle Perimeter",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Perimeter of rectangles",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-perimeter/v/perimeter-of-a-rectangle",
+          "type": "video",
+          "duration": "4 min"
+        },
+        {
+          "title": "Rectangle perimeter practice",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-perimeter/e/perimeter_1",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "A rectangle has two pairs of equal sides. Perimeter = 2 × length + 2 × width. Or: add all four sides together.",
+      "key_formula": "Perimeter = 2l + 2w or 2(l + w)",
+      "common_mistakes": [
+        "Multiplying length and width (that's area, not perimeter)",
+        "Forgetting to count both pairs of sides"
+      ]
+    },
+    "4.3": {
+      "concept_name": "Rectangle Area",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Area of rectangles",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-area/v/area-of-a-rectangle",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Rectangle area practice",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-area/e/area_of_squares_and_rectangles",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "Area is the space inside a rectangle. Multiply length times width: A = l × w. Make sure both measurements use the same units.",
+      "key_formula": "Area = length × width",
+      "common_mistakes": [
+        "Adding instead of multiplying",
+        "Confusing area with perimeter",
+        "Not converting units to match"
+      ]
+    },
+    "4.5": {
+      "concept_name": "Square Area",
+      "prerequisites": ["4.3"],
+      "khan_academy_lessons": [
+        {
+          "title": "Area of squares",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-area/v/area-of-a-square",
+          "type": "video",
+          "duration": "3 min"
+        },
+        {
+          "title": "Square area practice",
+          "url": "https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-area/e/area_of_squares_and_rectangles",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "A square has all sides equal. Area = side × side, or side squared (s²).",
+      "key_formula": "Area = s²",
+      "common_mistakes": [
+        "Multiplying by 4 instead of squaring",
+        "Confusing side length with area"
+      ]
+    },
+    "5.1": {
+      "concept_name": "Rectangular Prism Volume",
+      "prerequisites": ["4.3"],
+      "khan_academy_lessons": [
+        {
+          "title": "Volume of rectangular prisms",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-solids/hs-geo-solids-intro/v/volume-of-a-rectangular-prism",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Volume practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-solids/hs-geo-solids-intro/e/volume_1",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Volume is the space inside a 3D shape. For a rectangular prism (box), multiply length × width × height.",
+      "key_formula": "Volume = l × w × h",
+      "common_mistakes": [
+        "Using only 2 dimensions instead of 3",
+        "Confusing surface area with volume"
+      ]
+    },
+    "6.1": {
+      "concept_name": "Circle Properties",
+      "prerequisites": [],
+      "khan_academy_lessons": [
+        {
+          "title": "Circle basics",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-circle-basics/v/radius-diameter-circumference",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Circles practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-circle-basics/e/radius_diameter_and_circumference",
+          "type": "exercise",
+          "duration": "10 min"
+        }
+      ],
+      "simple_explanation": "A circle is all points equally distant from the center. Radius (r) = distance from center to edge. Diameter (d) = 2 × radius.",
+      "key_formula": "d = 2r, Circumference = 2πr",
+      "common_mistakes": [
+        "Confusing radius with diameter",
+        "Forgetting to use π in calculations"
+      ]
+    },
+    "6.2": {
+      "concept_name": "Arc Length",
+      "prerequisites": ["6.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Arc length introduction",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-arc-measure/v/circles-arc-length",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Arc length practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-circles/hs-geo-arc-measure/e/arc_length",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Arc length is part of the circle's circumference. Formula: (angle/360°) × 2πr. The angle tells you what fraction of the circle you're measuring.",
+      "key_formula": "Arc length = (θ/360°) × 2πr",
+      "common_mistakes": [
+        "Using the angle without dividing by 360",
+        "Confusing arc length with arc angle"
+      ]
+    },
+    "6.3": {
+      "concept_name": "Unit Circle & Trigonometry",
+      "prerequisites": ["3.2", "6.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Unit circle introduction",
+          "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/v/unit-circle-definition-of-trig-functions",
+          "type": "video",
+          "duration": "10 min"
+        },
+        {
+          "title": "Unit circle practice",
+          "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:unit-circle/e/unit-circle",
+          "type": "exercise",
+          "duration": "20 min"
+        }
+      ],
+      "simple_explanation": "The unit circle has radius 1. It helps us understand trig functions for any angle. Points on the circle are (cos θ, sin θ).",
+      "key_formula": "cos²θ + sin²θ = 1",
+      "common_mistakes": [
+        "Forgetting the radius is 1",
+        "Confusing x and y coordinates"
+      ]
+    },
+    "7.1": {
+      "concept_name": "Similar Figures",
+      "prerequisites": ["2.3"],
+      "khan_academy_lessons": [
+        {
+          "title": "Similar figures",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/v/similar-figures",
+          "type": "video",
+          "duration": "5 min"
+        },
+        {
+          "title": "Similar figures practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/e/similar_figures",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Similar figures have the same shape but different sizes. Corresponding sides are proportional, and corresponding angles are equal.",
+      "key_formula": "side₁/side₂ = scale factor (constant for all sides)",
+      "common_mistakes": [
+        "Not setting up proportions correctly",
+        "Forgetting that angles stay the same"
+      ]
+    },
+    "7.2": {
+      "concept_name": "Scale Factors",
+      "prerequisites": ["7.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Scale factors",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/v/scale-factor",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Perimeter and area with scale factors",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/v/perimeter-area-scale-factor",
+          "type": "video",
+          "duration": "8 min"
+        },
+        {
+          "title": "Scale factor practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-similarity-intro/e/scale_factor",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "Scale factor tells you how much bigger or smaller a figure becomes. If scale factor is 2, all lengths are doubled. Perimeter is multiplied by scale factor, area by scale factor².",
+      "key_formula": "New length = old length × scale factor",
+      "common_mistakes": [
+        "Applying scale factor to area the same as to length",
+        "Forgetting to square the scale factor for area"
+      ]
+    },
+    "7.3": {
+      "concept_name": "Real-World Applications",
+      "prerequisites": ["7.1", "7.2"],
+      "khan_academy_lessons": [
+        {
+          "title": "Similar triangles in real life",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-modeling-with-similarity/v/applying-similar-triangles",
+          "type": "video",
+          "duration": "9 min"
+        },
+        {
+          "title": "Shadow problems",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-modeling-with-similarity/v/shadow-problem-example",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Real-world similarity practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-similarity/hs-geo-modeling-with-similarity/e/similarity_word_problems",
+          "type": "exercise",
+          "duration": "20 min"
+        }
+      ],
+      "simple_explanation": "Use similar triangles to measure tall objects (like trees or buildings) by comparing shadows or using mirrors. Set up proportions with known and unknown measurements.",
+      "key_formula": "height₁/shadow₁ = height₂/shadow₂",
+      "common_mistakes": [
+        "Not drawing a diagram first",
+        "Setting up the proportion backwards"
+      ]
+    },
+    "8.1": {
+      "concept_name": "Adding Areas",
+      "prerequisites": ["4.3", "4.5"],
+      "khan_academy_lessons": [
+        {
+          "title": "Composite figures",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-measurement/hs-geo-area-intro/v/area-of-composite-shapes",
+          "type": "video",
+          "duration": "6 min"
+        },
+        {
+          "title": "Composite area practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-measurement/hs-geo-area-intro/e/area_of_squares_and_rectangles",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "For complex shapes made of simpler shapes, find the area of each part and add them together. Break the shape into rectangles, squares, triangles, etc.",
+      "key_formula": "Total area = area₁ + area₂ + area₃ + ...",
+      "common_mistakes": [
+        "Counting overlapping areas twice",
+        "Missing a section of the shape"
+      ]
+    },
+    "8.2": {
+      "concept_name": "Subtracting Areas",
+      "prerequisites": ["4.3", "8.1"],
+      "khan_academy_lessons": [
+        {
+          "title": "Shaded region problems",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-measurement/hs-geo-area-intro/v/shaded-region",
+          "type": "video",
+          "duration": "7 min"
+        },
+        {
+          "title": "Shaded area practice",
+          "url": "https://www.khanacademy.org/math/geometry/hs-geo-measurement/hs-geo-area-intro/e/area_of_squares_and_rectangles",
+          "type": "exercise",
+          "duration": "15 min"
+        }
+      ],
+      "simple_explanation": "To find a shaded region, calculate the area of the larger shape and subtract the area of the smaller shape inside it.",
+      "key_formula": "Shaded area = outer area - inner area",
+      "common_mistakes": [
+        "Subtracting in the wrong order",
+        "Forgetting to subtract at all"
+      ]
+    }
+  }
+}

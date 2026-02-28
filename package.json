@@ -1,0 +1,21 @@
+{
+  "name": "sat-learning-app",
+  "version": "1.0.0",
+  "description": "SAT Geometry practice app with gamification and Khan Academy integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p $PORT",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "sat",
+    "geometry",
+    "education",
+    "gamification"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
