@@ -5,38 +5,38 @@
 // Sample question data
 const sampleQuestions = [
     {
-        id: "a456f28c",
+        id: "5733ce30",
         number: 1,
         topic: "Lines & Angles",
         difficulty: "easy",
-        conceptId: "1.1",
-        text: "In the figure, two lines intersect at a point. Angle 1 and angle 2 are vertical angles. The measure of angle 1 is 72°. What is the measure of angle 2?",
+        conceptId: "1.3",
+        text: "In the given figure, AC extends to point D. If the measure of ∠BAC is equal to the measure of ∠BCA, what is the value of x?",
         diagramImage: "diagrams/question_8_1.png",
         options: [
-            { letter: "A", text: "72°" },
-            { letter: "B", text: "108°" },
-            { letter: "C", text: "144°" },
-            { letter: "D", text: "288°" }
+            { letter: "A", text: "110" },
+            { letter: "B", text: "70" },
+            { letter: "C", text: "55" },
+            { letter: "D", text: "40" }
         ],
-        correctAnswer: "A",
-        explanation: "Vertical angles have equal measures. Since angle 1 is 72°, angle 2 is also 72°."
+        correctAnswer: "C",
+        explanation: "The exterior angle (110°) equals the sum of the two remote interior angles. Since ∠BAC = ∠BCA = x, we have x + x = 110°, so 2x = 110° and x = 55°."
     },
     {
-        id: "f1747a6a",
+        id: "992f4e93",
         number: 2,
-        topic: "Triangles",
+        topic: "Parallel Lines",
         difficulty: "easy",
-        conceptId: "2.1",
-        text: "In triangle ABC, the measure of angle B is 52° and the measure of angle C is 17°. What is the measure of angle A?",
-        diagramImage: "diagrams/question_9_1.png",
+        conceptId: "1.2",
+        text: "In the figure, lines j and k are parallel. What is the value of a?",
+        diagramImage: "diagrams/question_11_1.png",
         options: [
-            { letter: "A", text: "21°" },
-            { letter: "B", text: "35°" },
-            { letter: "C", text: "69°" },
-            { letter: "D", text: "111°" }
+            { letter: "A", text: "26" },
+            { letter: "B", text: "64" },
+            { letter: "C", text: "116" },
+            { letter: "D", text: "154" }
         ],
-        correctAnswer: "D",
-        explanation: "The sum of the angle measures of a triangle is 180°. Adding the measures of angles B and C gives 52 + 17 = 69°. Therefore, the measure of angle A is 180 - 69 = 111°."
+        correctAnswer: "C",
+        explanation: "When a transversal crosses parallel lines, corresponding angles are equal and consecutive interior angles are supplementary. The angle shown (64°) and angle a are supplementary, so a = 180° - 64° = 116°."
     }
 ];
 
