@@ -8,21 +8,30 @@
           "title": "Vertical angles",
           "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/v/vertical-angles",
           "type": "video",
-          "duration": "4 min"
+          "duration": "4 min",
+          "reward_minutes": 2
         },
         {
           "title": "Complementary and supplementary angles",
           "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/v/complementary-and-supplementary-angles",
           "type": "video",
-          "duration": "3 min"
+          "duration": "3 min",
+          "reward_minutes": 2
         },
         {
           "title": "Angle relationships practice",
           "url": "https://www.khanacademy.org/math/geometry/hs-geo-foundations/hs-geo-angles/e/angles_1",
           "type": "exercise",
-          "duration": "10 min"
+          "duration": "10 min",
+          "reward_minutes": 5
         }
       ],
+      "concept_check": {
+        "question": "If two lines intersect and one angle measures 45°, what is the measure of the vertical angle?",
+        "options": ["45°", "90°", "135°", "180°"],
+        "correct_answer": 0,
+        "explanation": "Vertical angles are always equal, so if one angle is 45°, its vertical angle is also 45°."
+      },
       "simple_explanation": "When two lines cross, they create pairs of angles. Vertical angles (opposite each other) are always equal. Adjacent angles that form a straight line add up to 180° (supplementary).",
       "key_formula": "Vertical angles: ∠1 = ∠2",
       "common_mistakes": [
@@ -92,6 +101,12 @@
     "2.1": {
       "concept_name": "Triangle Angle Sum",
       "prerequisites": [],
+      "concept_check": {
+        "question": "In a triangle, two angles measure 60° and 80°. What is the third angle?",
+        "options": ["20°", "40°", "60°", "140°"],
+        "correct_answer": 1,
+        "explanation": "Triangle angles sum to 180°. So 180° - 60° - 80° = 40°."
+      },
       "khan_academy_lessons": [
         {
           "title": "Triangle angle sum theorem",

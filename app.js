@@ -11,11 +11,7 @@ const sampleQuestions = [
         difficulty: "easy",
         conceptId: "1.1",
         text: "In the figure, two lines intersect at a point. Angle 1 and angle 2 are vertical angles. The measure of angle 1 is 72°. What is the measure of angle 2?",
-        diagram: {
-            type: "intersecting-lines",
-            angle1: 72,
-            angle2: 72
-        },
+        diagramImage: "diagrams/question_8_1.png",
         options: [
             { letter: "A", text: "72°" },
             { letter: "B", text: "108°" },
@@ -32,12 +28,7 @@ const sampleQuestions = [
         difficulty: "easy",
         conceptId: "2.1",
         text: "In triangle ABC, the measure of angle B is 52° and the measure of angle C is 17°. What is the measure of angle A?",
-        diagram: {
-            type: "triangle",
-            angleA: 111,
-            angleB: 52,
-            angleC: 17
-        },
+        diagramImage: "diagrams/question_9_1.png",
         options: [
             { letter: "A", text: "21°" },
             { letter: "B", text: "35°" },
@@ -54,13 +45,15 @@ let state = {
     currentQuestionIndex: 0,
     selectedAnswer: null,
     streak: 0,
-    totalXP: 250,
+    totalXP: 0,
     level: 1,
-    timeBank: 45,
+    timeBank: 0,
     questionsCompleted: 0,
     dailyGoal: 5,
     isAnswered: false,
-    attemptNumber: 1
+    attemptNumber: 1,
+    watchedLessons: {}, // Track which lessons have been watched: { conceptId: { lessonIndex: true } }
+    conceptsChecked: {} // Track which concepts passed the concept check: { conceptId: true }
 };
 
 // DOM elements
@@ -386,7 +379,9 @@ function loadQuestion(index) {
 
     // Render diagram if present
     const diagramContainer = document.querySelector('.question-image');
-    if (question.diagram) {
+    if (question.diagramImage) {
+        diagramContainer.innerHTML = `<img src="${question.diagramImage}" alt="Question diagram" class="question-diagram-img" />`;
+    } else if (question.diagram) {
         const svg = createSVGDiagram(question.diagram);
         if (svg) {
             diagramContainer.innerHTML = '';
@@ -635,19 +630,32 @@ function showHelpModal(conceptId) {
 
     // Khan Academy lessons
     const khanLessonsDiv = document.getElementById('khanLessons');
-    khanLessonsDiv.innerHTML = `
-        <h4>🎓 Khan Academy Lessons</h4>
-        ${concept.khan_academy_lessons.map(lesson => `
+    khanLessonsDiv.innerHTML = `<h4>🎓 Khan Academy Lessons</h4>`;
+
+    concept.khan_academy_lessons.forEach((lesson, index) => {
+        const lessonItem = document.createElement('div');
+        lessonItem.className = 'lesson-item-container';
+
+        const isWatched = state.watchedLessons[conceptId]?.[index];
+
+        lessonItem.innerHTML = `
             <a href="${lesson.url}" target="_blank" class="lesson-item">
                 <span class="lesson-icon">${lesson.type === 'video' ? '▶️' : '✏️'}</span>
                 <div class="lesson-info">
                     <div class="lesson-title">${lesson.title}</div>
-                    <div class="lesson-meta">${lesson.type === 'video' ? 'Video' : 'Practice'} • ${lesson.duration}</div>
+                    <div class="lesson-meta">${lesson.type === 'video' ? 'Video' : 'Practice'} • ${lesson.duration} • Earn ${lesson.reward_minutes || 2} min</div>
                 </div>
-                <span class="lesson-badge">Watch</span>
+                <span class="lesson-badge">${isWatched ? '✓ Watched' : 'Watch'}</span>
             </a>
-        `).join('')}
-    `;
+            ${!isWatched ? `
+                <button class="btn-mark-watched" data-concept="${conceptId}" data-lesson="${index}">
+                    ✓ I watched this (earn ${lesson.reward_minutes || 2} min)
+                </button>
+            ` : ''}
+        `;
+
+        khanLessonsDiv.appendChild(lessonItem);
+    });
 
     // Common mistakes
     const mistakesDiv = document.getElementById('commonMistakes');
@@ -658,8 +666,164 @@ function showHelpModal(conceptId) {
         </ul>
     `;
 
+    // Concept Check section
+    if (concept.concept_check && !state.conceptsChecked[conceptId]) {
+        const conceptCheckDiv = document.createElement('div');
+        conceptCheckDiv.className = 'concept-check-section';
+        conceptCheckDiv.id = 'conceptCheckSection';
+        conceptCheckDiv.innerHTML = `
+            <h4>✅ Concept Check - Earn 3 Bonus Minutes!</h4>
+            <p class="concept-check-intro">Show you understand this concept to unlock bonus rewards</p>
+            <button class="btn-primary" id="startConceptCheckBtn">Start Concept Check</button>
+        `;
+        elements.helpModalBody.querySelector('.concept-breakdown').appendChild(conceptCheckDiv);
+    } else if (state.conceptsChecked[conceptId]) {
+        const passedDiv = document.createElement('div');
+        passedDiv.className = 'concept-check-passed';
+        passedDiv.innerHTML = `
+            <h4>✅ Concept Check Passed!</h4>
+            <p>You've mastered this concept!</p>
+        `;
+        elements.helpModalBody.querySelector('.concept-breakdown').appendChild(passedDiv);
+    }
+
     // Show modal
     elements.helpModal.style.display = 'block';
+
+    // Attach event listeners for lesson tracking buttons
+    document.querySelectorAll('.btn-mark-watched').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const conceptId = e.target.dataset.concept;
+            const lessonIndex = parseInt(e.target.dataset.lesson);
+            markLessonWatched(conceptId, lessonIndex);
+        });
+    });
+
+    // Attach event listener for concept check button
+    const conceptCheckBtn = document.getElementById('startConceptCheckBtn');
+    if (conceptCheckBtn) {
+        conceptCheckBtn.addEventListener('click', () => showConceptCheck(conceptId));
+    }
+}
+
+// Mark a lesson as watched and award time
+function markLessonWatched(conceptId, lessonIndex) {
+    const concept = khanAcademyLessons[conceptId];
+    if (!concept) return;
+
+    const lesson = concept.khan_academy_lessons[lessonIndex];
+    if (!lesson) return;
+
+    // Initialize tracking if needed
+    if (!state.watchedLessons[conceptId]) {
+        state.watchedLessons[conceptId] = {};
+    }
+
+    // Mark as watched
+    state.watchedLessons[conceptId][lessonIndex] = true;
+
+    // Award time
+    const rewardMinutes = lesson.reward_minutes || 2;
+    state.timeBank += rewardMinutes;
+    updateUI();
+
+    // Show feedback
+    showNotification(`🎉 +${rewardMinutes} minutes earned! Keep learning!`);
+
+    // Refresh the modal to update UI
+    closeHelpModal();
+    setTimeout(() => showHelpModal(conceptId), 100);
+}
+
+// Show concept check mini-quiz
+function showConceptCheck(conceptId) {
+    const concept = khanAcademyLessons[conceptId];
+    if (!concept || !concept.concept_check) return;
+
+    const check = concept.concept_check;
+
+    const conceptCheckSection = document.getElementById('conceptCheckSection');
+    conceptCheckSection.innerHTML = `
+        <h4>✅ Concept Check</h4>
+        <p class="concept-check-question">${check.question}</p>
+        <div class="concept-check-options">
+            ${check.options.map((option, index) => `
+                <button class="concept-check-option" data-index="${index}">
+                    ${String.fromCharCode(65 + index)}. ${option}
+                </button>
+            `).join('')}
+        </div>
+    `;
+
+    // Add event listeners to answer buttons
+    document.querySelectorAll('.concept-check-option').forEach((btn, index) => {
+        btn.addEventListener('click', () => checkConceptAnswer(conceptId, index));
+    });
+}
+
+// Check concept check answer
+function checkConceptAnswer(conceptId, selectedIndex) {
+    const concept = khanAcademyLessons[conceptId];
+    const check = concept.concept_check;
+
+    const isCorrect = selectedIndex === check.correct_answer;
+
+    if (isCorrect) {
+        // Mark concept as checked
+        state.conceptsChecked[conceptId] = true;
+
+        // Award bonus time
+        state.timeBank += 3;
+        state.totalXP += 50;
+        updateUI();
+
+        const conceptCheckSection = document.getElementById('conceptCheckSection');
+        conceptCheckSection.innerHTML = `
+            <div class="concept-check-result correct">
+                <div class="result-icon">✓</div>
+                <h4>Correct!</h4>
+                <p>${check.explanation}</p>
+                <div class="reward-earned">
+                    <span class="reward-icon">🎮</span>
+                    <span>+3 minutes earned!</span>
+                </div>
+                <div class="reward-earned">
+                    <span class="reward-icon">⭐</span>
+                    <span>+50 XP earned!</span>
+                </div>
+            </div>
+        `;
+
+        showNotification('🎉 Concept Check passed! +3 minutes & +50 XP!');
+    } else {
+        const conceptCheckSection = document.getElementById('conceptCheckSection');
+        conceptCheckSection.innerHTML = `
+            <div class="concept-check-result incorrect">
+                <div class="result-icon">✗</div>
+                <h4>Not quite</h4>
+                <p>${check.explanation}</p>
+                <button class="btn-secondary" id="retryConceptCheckBtn">Try Again</button>
+            </div>
+        `;
+
+        document.getElementById('retryConceptCheckBtn').addEventListener('click', () => {
+            showConceptCheck(conceptId);
+        });
+    }
+}
+
+// Show notification toast
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification-toast';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => notification.classList.add('show'), 10);
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 }
 
 // Close help modal
