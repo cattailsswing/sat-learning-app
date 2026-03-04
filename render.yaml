@@ -1,14 +1,6 @@
 services:
   - type: web
     name: sat-learning-app
-    env: static
-    buildCommand: echo "No build needed"
+    runtime: static
+    buildCommand: echo "Static site - no build needed"
     staticPublishPath: .
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=3600
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
