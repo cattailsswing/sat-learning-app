@@ -18,8 +18,8 @@ const sampleQuestions = [
             { letter: "C", text: "55" },
             { letter: "D", text: "40" }
         ],
-        correctAnswer: "C",
-        explanation: "The exterior angle (110°) equals the sum of the two remote interior angles. Since ∠BAC = ∠BCA = x, we have x + x = 110°, so 2x = 110° and x = 55°."
+        correctAnswer: "D",
+        explanation: "Since ∠BCD and ∠BCA form a linear pair, ∠BCA = 180° - 110° = 70°. It's given that ∠BAC = ∠BCA, so ∠BAC = 70° also. The angles in triangle ABC sum to 180°: x + 70° + 70° = 180°, so x = 40°."
     },
     {
         id: "992f4e93",
