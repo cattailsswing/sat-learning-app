@@ -502,11 +502,12 @@ function calculateRewards(isCorrect, attemptNumber) {
         xp = 30;
     }
 
-    // Streak bonus
-    if (state.streak >= 20) time += 10;
-    else if (state.streak >= 10) time += 5;
-    else if (state.streak >= 5) time += 2;
-    else if (state.streak >= 3) time += 1;
+    // Streak bonus (additive - rewards accumulate!)
+    if (state.streak >= 2) time += 0.5;  // 2 in a row: +0.5 min
+    if (state.streak >= 3) time += 0.5;  // 3 in a row: +1 min total
+    if (state.streak >= 5) time += 1;    // 5 in a row: +2 min total
+    if (state.streak >= 10) time += 3;   // 10 in a row: +5 min total
+    if (state.streak >= 20) time += 5;   // 20 in a row: +10 min total
 
     // Morning bonus (simple check)
     const hour = new Date().getHours();
