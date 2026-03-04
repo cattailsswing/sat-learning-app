@@ -11,6 +11,11 @@ const sampleQuestions = [
         difficulty: "easy",
         conceptId: "1.1",
         text: "In the figure, two lines intersect at a point. Angle 1 and angle 2 are vertical angles. The measure of angle 1 is 72°. What is the measure of angle 2?",
+        diagram: {
+            type: "intersecting-lines",
+            angle1: 72,
+            angle2: 72
+        },
         options: [
             { letter: "A", text: "72°" },
             { letter: "B", text: "108°" },
@@ -27,6 +32,12 @@ const sampleQuestions = [
         difficulty: "easy",
         conceptId: "2.1",
         text: "In triangle ABC, the measure of angle B is 52° and the measure of angle C is 17°. What is the measure of angle A?",
+        diagram: {
+            type: "triangle",
+            angleA: 111,
+            angleB: 52,
+            angleC: 17
+        },
         options: [
             { letter: "A", text: "21°" },
             { letter: "B", text: "35°" },
@@ -80,6 +91,227 @@ const elements = {
 
 // Khan Academy lessons data
 let khanAcademyLessons = {};
+
+// SVG Diagram Generation Functions
+function createSVGDiagram(diagramData) {
+    if (!diagramData || !diagramData.type) {
+        return null;
+    }
+
+    switch (diagramData.type) {
+        case 'intersecting-lines':
+            return createIntersectingLinesDiagram(diagramData);
+        case 'triangle':
+            return createTriangleDiagram(diagramData);
+        default:
+            return null;
+    }
+}
+
+function createIntersectingLinesDiagram(data) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 300 200");
+    svg.setAttribute("class", "diagram-svg");
+
+    // Create two intersecting lines
+    const line1 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line1.setAttribute("x1", "30");
+    line1.setAttribute("y1", "50");
+    line1.setAttribute("x2", "270");
+    line1.setAttribute("y2", "150");
+    line1.setAttribute("stroke", "#2d3748");
+    line1.setAttribute("stroke-width", "2");
+
+    const line2 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line2.setAttribute("x1", "30");
+    line2.setAttribute("y1", "150");
+    line2.setAttribute("x2", "270");
+    line2.setAttribute("y2", "50");
+    line2.setAttribute("stroke", "#2d3748");
+    line2.setAttribute("stroke-width", "2");
+
+    // Center point
+    const center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    center.setAttribute("cx", "150");
+    center.setAttribute("cy", "100");
+    center.setAttribute("r", "3");
+    center.setAttribute("fill", "#e53e3e");
+
+    // Angle 1 arc (top)
+    const arc1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    arc1.setAttribute("d", "M 180 90 A 35 35 0 0 1 165 70");
+    arc1.setAttribute("stroke", "#3182ce");
+    arc1.setAttribute("stroke-width", "2");
+    arc1.setAttribute("fill", "none");
+
+    // Angle 2 arc (bottom - vertical angle)
+    const arc2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    arc2.setAttribute("d", "M 120 110 A 35 35 0 0 1 135 130");
+    arc2.setAttribute("stroke", "#38a169");
+    arc2.setAttribute("stroke-width", "2");
+    arc2.setAttribute("fill", "none");
+
+    // Labels
+    const label1 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    label1.setAttribute("x", "185");
+    label1.setAttribute("y", "75");
+    label1.setAttribute("fill", "#3182ce");
+    label1.setAttribute("font-size", "16");
+    label1.setAttribute("font-weight", "bold");
+    label1.textContent = "∠1";
+
+    const label2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    label2.setAttribute("x", "100");
+    label2.setAttribute("y", "135");
+    label2.setAttribute("fill", "#38a169");
+    label2.setAttribute("font-size", "16");
+    label2.setAttribute("font-weight", "bold");
+    label2.textContent = "∠2";
+
+    // Angle value for angle 1
+    if (data.angle1) {
+        const value1 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        value1.setAttribute("x", "195");
+        value1.setAttribute("y", "90");
+        value1.setAttribute("fill", "#3182ce");
+        value1.setAttribute("font-size", "14");
+        value1.textContent = `${data.angle1}°`;
+        svg.appendChild(value1);
+    }
+
+    svg.appendChild(line1);
+    svg.appendChild(line2);
+    svg.appendChild(center);
+    svg.appendChild(arc1);
+    svg.appendChild(arc2);
+    svg.appendChild(label1);
+    svg.appendChild(label2);
+
+    return svg;
+}
+
+function createTriangleDiagram(data) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 300 220");
+    svg.setAttribute("class", "diagram-svg");
+
+    // Triangle vertices
+    const ax = 150, ay = 30;  // A (top)
+    const bx = 50, by = 180;   // B (bottom left)
+    const cx = 250, cy = 180;  // C (bottom right)
+
+    // Triangle sides
+    const triangle = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    triangle.setAttribute("points", `${ax},${ay} ${bx},${by} ${cx},${cy}`);
+    triangle.setAttribute("stroke", "#2d3748");
+    triangle.setAttribute("stroke-width", "2");
+    triangle.setAttribute("fill", "rgba(99, 179, 237, 0.1)");
+
+    // Vertices
+    const vertexA = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    vertexA.setAttribute("cx", ax);
+    vertexA.setAttribute("cy", ay);
+    vertexA.setAttribute("r", "3");
+    vertexA.setAttribute("fill", "#e53e3e");
+
+    const vertexB = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    vertexB.setAttribute("cx", bx);
+    vertexB.setAttribute("cy", by);
+    vertexB.setAttribute("r", "3");
+    vertexB.setAttribute("fill", "#e53e3e");
+
+    const vertexC = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    vertexC.setAttribute("cx", cx);
+    vertexC.setAttribute("cy", cy);
+    vertexC.setAttribute("r", "3");
+    vertexC.setAttribute("fill", "#e53e3e");
+
+    // Vertex labels
+    const labelA = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    labelA.setAttribute("x", ax);
+    labelA.setAttribute("y", ay - 10);
+    labelA.setAttribute("text-anchor", "middle");
+    labelA.setAttribute("fill", "#2d3748");
+    labelA.setAttribute("font-size", "18");
+    labelA.setAttribute("font-weight", "bold");
+    labelA.textContent = "A";
+
+    const labelB = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    labelB.setAttribute("x", bx - 15);
+    labelB.setAttribute("y", by + 5);
+    labelB.setAttribute("text-anchor", "middle");
+    labelB.setAttribute("fill", "#2d3748");
+    labelB.setAttribute("font-size", "18");
+    labelB.setAttribute("font-weight", "bold");
+    labelB.textContent = "B";
+
+    const labelC = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    labelC.setAttribute("x", cx + 15);
+    labelC.setAttribute("y", cy + 5);
+    labelC.setAttribute("text-anchor", "middle");
+    labelC.setAttribute("fill", "#2d3748");
+    labelC.setAttribute("font-size", "18");
+    labelC.setAttribute("font-weight", "bold");
+    labelC.textContent = "C";
+
+    // Angle arcs
+    if (data.angleA) {
+        const arcA = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        arcA.setAttribute("d", `M ${ax - 20} ${ay + 25} A 25 25 0 0 1 ${ax + 20} ${ay + 25}`);
+        arcA.setAttribute("stroke", "#805ad5");
+        arcA.setAttribute("stroke-width", "2");
+        arcA.setAttribute("fill", "none");
+        svg.appendChild(arcA);
+    }
+
+    if (data.angleB) {
+        const arcB = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        arcB.setAttribute("d", `M ${bx + 25} ${by} A 25 25 0 0 1 ${bx + 18} ${by - 20}`);
+        arcB.setAttribute("stroke", "#3182ce");
+        arcB.setAttribute("stroke-width", "2");
+        arcB.setAttribute("fill", "none");
+
+        const angleTextB = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        angleTextB.setAttribute("x", bx + 35);
+        angleTextB.setAttribute("y", by - 5);
+        angleTextB.setAttribute("fill", "#3182ce");
+        angleTextB.setAttribute("font-size", "14");
+        angleTextB.setAttribute("font-weight", "bold");
+        angleTextB.textContent = `${data.angleB}°`;
+
+        svg.appendChild(arcB);
+        svg.appendChild(angleTextB);
+    }
+
+    if (data.angleC) {
+        const arcC = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        arcC.setAttribute("d", `M ${cx - 25} ${cy} A 25 25 0 0 0 ${cx - 18} ${cy - 20}`);
+        arcC.setAttribute("stroke", "#38a169");
+        arcC.setAttribute("stroke-width", "2");
+        arcC.setAttribute("fill", "none");
+
+        const angleTextC = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        angleTextC.setAttribute("x", cx - 35);
+        angleTextC.setAttribute("y", cy - 5);
+        angleTextC.setAttribute("fill", "#38a169");
+        angleTextC.setAttribute("font-size", "14");
+        angleTextC.setAttribute("font-weight", "bold");
+        angleTextC.textContent = `${data.angleC}°`;
+
+        svg.appendChild(arcC);
+        svg.appendChild(angleTextC);
+    }
+
+    svg.appendChild(triangle);
+    svg.appendChild(vertexA);
+    svg.appendChild(vertexB);
+    svg.appendChild(vertexC);
+    svg.appendChild(labelA);
+    svg.appendChild(labelB);
+    svg.appendChild(labelC);
+
+    return svg;
+}
 
 // Initialize the app
 async function init() {
@@ -151,6 +383,20 @@ function loadQuestion(index) {
 
     // Update question text
     document.querySelector('.question-text').textContent = question.text;
+
+    // Render diagram if present
+    const diagramContainer = document.querySelector('.question-image');
+    if (question.diagram) {
+        const svg = createSVGDiagram(question.diagram);
+        if (svg) {
+            diagramContainer.innerHTML = '';
+            diagramContainer.appendChild(svg);
+        } else {
+            diagramContainer.innerHTML = '<div class="image-placeholder"><span>📊 Diagram not available</span></div>';
+        }
+    } else {
+        diagramContainer.innerHTML = '<div class="image-placeholder"><span>📊 No diagram for this question</span></div>';
+    }
 
     // Update answer options
     const optionsContainer = document.querySelector('.answer-options');

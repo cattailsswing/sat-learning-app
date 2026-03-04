@@ -415,6 +415,14 @@ body {
     font-size: 0.875rem;
 }
 
+.diagram-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
 .answer-options {
     display: flex;
     flex-direction: column;
